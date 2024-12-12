@@ -17,15 +17,16 @@ const data = search.videos[0];
 const url = data.url
 
 let desc = `
-🎧𝗖𝗞 𝗦𝗢𝗡𝗚𝗦 𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗𝗘𝗥🎧
+🎧𝗖𝗞 𝗦𝗢𝗡𝗚 𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗𝗘𝗥🎧
 
-title: ${data.title}
-description: ${data.description}
-time: ${data.timestamp}
-ago: ${data.ago}
-views: ${data.views}
+🔖𝕋𝕚𝕥𝕝𝕖: *${data.title}*
+📃𝔻𝕖𝕤𝕔𝕣𝕚𝕡𝕥𝕚𝕠𝕟: *${data.description}*
+⏰𝔻𝕦𝕣𝕒𝕥𝕚𝕠𝕟: *${data.timestamp}*
+📆𝔻𝕒𝕥𝕖: *${data.ago}*
+👀𝕍𝕚𝕖𝕨𝕤: *${data.views}*
 
-> 👨🏻‍💻 ᴄʜᴇᴛʜᴍɪɴᴀ ᴋᴀᴠɪꜱʜᴀɴ
+
+> 👨🏻‍💻 ᴍᴀᴅᴇ ʙʏ *ᴄʜᴇᴛʜᴍɪɴᴀ ᴋᴀᴠɪꜱʜᴀɴ*
 `
 await conn.sendMessage(from,{image:{url: data.thumbnail},caption:desc},{quoted:mek});
 
@@ -36,7 +37,7 @@ let downloadUrl = down.dl_url
 
 //send audio+document message
 await conn.sendMessage(from,{audio: {url:downloadUrl},mimetype:"audio/mpeg"},{quoted:mek})
-await conn.sendMessage(from,{document: {url:downloadUrl},mimetype:"audio/mpeg",fileName:data.title + ".mp3",caption:"> ᴍᴀᴅᴇ ʙʏ ᴄʜᴇᴛʜᴍɪɴᴀ ᴋᴀᴠɪꜱʜᴀɴ"},{quoted:mek})
+await conn.sendMessage(from,{document: {url:downloadUrl},mimetype:"audio/mpeg",fileName:data.title + ".mp3",caption:"> 👨🏻‍💻ᴍᴀᴅᴇ ʙʏ *ᴄʜᴇᴛʜᴍɪɴᴀ ᴋᴀᴠɪꜱʜᴀɴ*"},{quoted:mek})
 
     
 }catch(e){
@@ -62,15 +63,16 @@ const data = search.videos[0];
 const url = data.url
 
 let desc = `
-🎧𝗖𝗞 𝗬𝗧 𝗩𝗜𝗗𝗘𝗢 𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗𝗘𝗥🎧
+🎥𝗖𝗞 𝗬𝗧 𝗩𝗜𝗗𝗘𝗢 𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗𝗘𝗥🎥
 
-title: ${data.title}
-description: ${data.description}
-time: ${data.timestamp}
-ago: ${data.ago}
-views: ${data.views}
+🔖𝕋𝕚𝕥𝕝𝕖: *${data.title}*
+📃𝔻𝕖𝕤𝕔𝕣𝕚𝕡𝕥𝕚𝕠𝕟: *${data.description}*
+⏰𝔻𝕦𝕣𝕒𝕥𝕚𝕠𝕟: *${data.timestamp}*
+📆𝔻𝕒𝕥𝕖: *${data.ago}*
+👀𝕍𝕚𝕖𝕨𝕤: *${data.views}*
 
-> 👨🏻‍💻 ᴄʜᴇᴛʜᴍɪɴᴀ ᴋᴀᴠɪꜱʜᴀɴ
+
+> 👨🏻‍💻 ᴍᴀᴅᴇ ʙʏ *ᴄʜᴇᴛʜᴍɪɴᴀ ᴋᴀᴠɪꜱʜᴀɴ*
 `
 await conn.sendMessage(from,{image:{url: data.thumbnail},caption:desc},{quoted:mek});
 
@@ -81,7 +83,7 @@ let downloadUrl = down.dl_url
 
 //send video+document message
 await conn.sendMessage(from,{video: {url:downloadUrl},mimetype:"video/mp4"},{quoted:mek})
-await conn.sendMessage(from,{document: {url:downloadUrl},mimetype:"video/mp4",fileName:data.title + ".mp4",caption:"> ᴍᴀᴅᴇ ʙʏ ᴄʜᴇᴛʜᴍɪɴᴀ ᴋᴀᴠɪꜱʜᴀɴ"},{quoted:mek})
+await conn.sendMessage(from,{document: {url:downloadUrl},mimetype:"video/mp4",fileName:data.title + ".mp4",caption:"> 👨🏻‍💻ᴍᴀᴅᴇ ʙʏ *ᴄʜᴇᴛʜᴍɪɴᴀ ᴋᴀᴠɪꜱʜᴀɴ*"},{quoted:mek})
 
     
 }catch(e){
