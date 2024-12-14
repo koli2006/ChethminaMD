@@ -49,7 +49,7 @@ ${menu.search}
 
 > 👨🏻‍💻 ᴍᴀᴅᴇ ʙʏ *ᴄʜᴇᴛʜᴍɪɴᴀ ᴋᴀᴠɪꜱʜᴀɴ*`
 
-await conn.sendMessage(from,{text:madeMenu},)
+await conn.sendMessage(from,{image:{url:"https://telegra.ph/file/51800f684e03883b372e3.jpg"},caption:madeMenu},{quoted:mek})
 
 }catch(e){
 console.log(e)
