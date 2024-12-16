@@ -14,7 +14,7 @@ const axios = require("axios");
 
 let storedLink = null;  
 
-const API_ENDPOINT = "https://saviya-kolla-api.up.railway.app/news/ada"; 
+const API_ENDPOINT = "https://saviya-kolla-api.up.railway.app/"; 
 
 async function sendNews(title, desc, date) {
     const message = `*${title}*\n\n${desc}\n\n${date}`;
