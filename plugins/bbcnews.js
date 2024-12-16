@@ -13,7 +13,7 @@ cmd({
 }, async (conn, mek, m, { from, reply }) => {
     try {
        
-        const apiUrl = "https://darksadas-yt-bbc-news.vercel.app/";
+        const apiUrl = "https://saviya-kolla-api.up.railway.app/news/bbc";
 
        
         const response = await axios.get(apiUrl);
