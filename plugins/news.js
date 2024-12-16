@@ -10,29 +10,33 @@ cmd({
     react: "📰",
     use: '.ada',
     filename: __filename
-}, async (conn, mek, m, { from, reply }) => {
+const axios = require("axios");
+
+let storedLink = null;  
+
+const API_ENDPOINT = "https://saviya-kolla-api.up.railway.app/news/ada"; 
+
+async function sendNews(title, desc, date) {
+    const message = `*${title}*\n\n${desc}\n\n${date}`;
+    await conn.sendMessage( jid , { text: message });  
+}
+ 
+async function checkForNewsUpdates() {
     try {
-       
-        const apiUrl = "https://saviya-kolla-api.up.railway.app/news/ada";
+        const response = await axios.get(API_ENDPOINT);
+        const { link, title, desc, date } = response.data;
 
-       
-        const response = await axios.get(apiUrl);
-
-        
-        if (!response.data.status) {
-            return reply("Failed to fetch the latest Ada news. Please try again later.");
-        }
-
-        
-        const { title, image, date, time, url, desc } = response.data.result;
-
-        
-        const newsMessage = `📰 *${title}*\n\n${desc}\n\n*📅 Date:* ${date}\n*🕒 Time:* ${time}\n\n🔗 [Read More](${url})`;
-
-       
-        await conn.sendMessage(from, { image: { url: image }, caption: newsMessage });
-    } catch (e) {
-        console.log(e);
-        reply(`An error occurred: ${e.message}`);
+        if (storedLink !== link) {  
+            await sendNews(title, desc, date);
+            
+            storedLink = link;
+        } 
+    } catch (error) {
+        console.error("Error fetching API data:", error.message);
     }
-});
+
+    // Re-run the function after a 5-minute delay
+    setTimeout(checkForNewsUpdates, 5 * 60 * 1000); // 5 minutes in milliseconds
+}
+ 
+checkForNewsUpdates();
