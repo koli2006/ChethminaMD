@@ -1,43 +1,30 @@
 const {cmd , commands} = require('../command')
-const fg = require('api-dylux')
-const yts = require('yt-search')
+const movie = require('mrnima-moviedl')
 
 
 cmd({
-    pattern: "video",
-    desc: "Download videos",
+    pattern: "movie",
+    desc: "Download movies",
     category: "download",
     filename: __filename
 },
 async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
-if(!q) return reply("Please give me url or title")
-const search = await yts(q)
+if(!q) return reply("Please give me movie name")
+const search = await movie(q)
 const data = search.videos[0];
 const url = data.url
 
 let desc = `
-🎥𝗖𝗞 𝗬𝗧 𝗩𝗜𝗗𝗘𝗢 𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗𝗘𝗥🎥
-
-🔖𝕋𝕚𝕥𝕝𝕖: *${data.title}*
-⏰𝔻𝕦𝕣𝕒𝕥𝕚𝕠𝕟: *${data.timestamp}*
-📆𝕌𝕡𝕝𝕠𝕒𝕕𝕖𝕕: *${data.ago}*
-👀𝕍𝕚𝕖𝕨𝕤: *${data.views}*
-🤵🏻𝔸𝕦𝕥𝕙𝕠𝕣: *${data.author.name}*
-🔗𝕃𝕚𝕟𝕜: *${data.url}*
+🎥𝗖𝗞 𝗬𝗧 𝗩𝗜𝗗𝗘𝗢 𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗𝗘𝗥
 
 
 > 👨🏻‍💻 ᴍᴀᴅᴇ ʙʏ *ᴄʜᴇᴛʜᴍɪɴᴀ ᴋᴀᴠɪꜱʜᴀɴ*
 `
-await conn.sendMessage(from,{image:{url: data.thumbnail},caption:desc},{quoted:mek});
+await conn.sendMessage(from,{message:desc},{quoted:mek});
 
-//download video
-
-let down = await fg.ytv(url)
-let downloadUrl = down.dl_url
 
 //send video+document message
-await conn.sendMessage(from,{video: {url:downloadUrl},mimetype:"video/mp4"},{quoted:mek})
 await conn.sendMessage(from,{document: {url:downloadUrl},mimetype:"video/mp4",fileName:data.title + ".mp4",caption:"> 👨🏻‍💻ᴍᴀᴅᴇ ʙʏ *ᴄʜᴇᴛʜᴍɪɴᴀ ᴋᴀᴠɪꜱʜᴀɴ*"},{quoted:mek})
 
     
