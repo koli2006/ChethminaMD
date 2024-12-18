@@ -1,3 +1,7 @@
+const config = require('../config')
+const {cmd , commands} = require('../command')
+const os = require("os")
+const { getBuffer, getGroupAdmins, getRandom, h2k, isUrl, Json, runtime, sleep, fetchJson} = require('../lib/functions')
 cmd({
     pattern: "menu",
     desc: "To get the menu.",
