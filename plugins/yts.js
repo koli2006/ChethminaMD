@@ -1,58 +1,88 @@
+const {cmd , commands} = require('../command')
+const yts = require('yt-search');
+const fg = require('api-dylux');
 
-const { cmd, commands } = require('../command')
-const axios = require('axios');
-
+// -------- Song/Video Download --------
 cmd({
-    pattern: "yts",
-    react: "🔍",
-    alias: ["youtubesearch2"],
-    desc: "Search for YouTube videos using a query",
-    category: "search",
-    use: ".yts2",
+    pattern: 'yts',
+    alias: ["get"],
+    desc: 'Download Song / Video',
+    use: '.play Title',
+    react: "🗂",
+    category: 'download',
     filename: __filename
-}, async (conn, mek, m, { from, quoted, q, reply }) => {
+},
+async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
     try {
-       
-        if (!q) return reply("Please provide a search query.");
+        if (!q) return reply('Please provide a title.');
 
-       
-      await conn.sendMessage(from, { text: "*🔍 Searching YouTube...*" }, { quoted: mek });
+        const search = await yts(q);
+        const data = search.videos[0];
+        const url = data.url;
 
+        let desc = `*NADEEN-MD SONG/VIDEO DOWNLOADER . .⚙️*
         
-        const apiUrl = `https://saviya-kolla-api.up.railway.app/api/search?query=${encodeURIComponent(q)}`;
-        const response = await fetch(apiUrl);
+⚙️ TITLE - ${data.title}
 
-        if (!response.ok) {
-            console.error(`API Error: ${response.status} ${response.statusText}`);
-            return reply("Failed to fetch results. Please try again later.");
-        }
+⚙️ VIEWS - ${data.views}
 
-        const data = await response.json();
+⚙️ DESCRIPTION - ${data.description}
 
-       
-        if (!data || !Array.isArray(data.results) || data.results.length === 0) {
-            return reply("No YouTube videos found for your search query.");
-        }
+⚙️ TIME - ${data.timestamp}
 
-       
-        let videoInfo = "*CKMD VIDEO SEARCHER❤️‍🔥🌝:*\n\n";
-        data.results.forEach(video => {
-            const views = video.views ? video.views.toLocaleString() : "N/A"; 
-            videoInfo += `┌──────────────────────\n`;
-            videoInfo += `├✨ *Title:* ${video.title || 'N/A'}\n`;
-            videoInfo += `├🕒 *Duration:* ${video.duration?.timestamp || 'N/A'}\n`;
-            videoInfo += `├👀 *Views:* ${views}\n`;
-            videoInfo += `├📆 *Uploaded:* ${video.ago || 'N/A'}\n`;
-            videoInfo += `├🔗 *Video URL:* ${video.url || 'N/A'}\n`;
-            videoInfo += `├📸 *Author:* ${video.author?.name || 'N/A'} (${video.author?.url || 'N/A'})\n`;
-            videoInfo += `└──────────────────────\n\n\n> 👨🏻‍💻 ᴍᴀᴅᴇ ʙʏ *ᴄʜᴇᴛʜᴍɪɴᴀ ᴋᴀᴠɪꜱʜᴀɴ*`;
+⚙️ AGO - ${data.ago}
+
+*Reply This Message With Option*
+
+*1.1 Audio With Normal Format*
+*1.2 Audio With Document Format*
+*2.1 Video With Normal Format*
+*2.2 Video With Document Format*
+
+> *©ᴘᴏᴡᴇʀᴇᴅ ʙʏ ɴᴀᴅᴇᴇɴ ᴘᴏᴏʀɴᴀ*`;
+
+        const vv = await conn.sendMessage(from, { image: { url: data.thumbnail }, caption: desc }, { quoted: mek });
+
+        conn.ev.on('messages.upsert', async (msgUpdate) => {
+            const msg = msgUpdate.messages[0];
+            if (!msg.message || !msg.message.extendedTextMessage) return;
+
+            const selectedOption = msg.message.extendedTextMessage.text.trim();
+
+            if (msg.message.extendedTextMessage.contextInfo && msg.message.extendedTextMessage.contextInfo.stanzaId === vv.key.id) {
+                switch (selectedOption) {
+                    case '1.1':
+                        let down = await fg.yta(url);
+                        let downloadUrl = down.dl_url;
+                        await conn.sendMessage(from, { audio: { url:downloadUrl }, caption: '> *©ᴘᴏᴡᴇʀᴇᴅ ʙʏ ɴᴀᴅᴇᴇɴ ᴘᴏᴏʀɴᴀ*', mimetype: 'audio/mpeg'},{ quoted: mek });
+                        break;
+                    case '1.2':               
+                        // Send Document File
+                        let downdoc = await fg.yta(url);
+                        let downloaddocUrl = downdoc.dl_url;
+                        await conn.sendMessage(from, { document: { url:downloaddocUrl }, caption: '> *©ᴘᴏᴡᴇʀᴇᴅ ʙʏ ɴᴀᴅᴇᴇɴ ᴘᴏᴏʀɴᴀ*', mimetype: 'audio/mpeg', fileName:data.title + ".mp3"}, { quoted: mek });
+                        await conn.sendMessage(from, { react: { text: '✅', key: mek.key } })
+                        break;
+                    case '2.1':
+                        let downvid = await fg.ytv(url);
+                        let downloadvUrl = downvid.dl_url;
+                        await conn.sendMessage(from, { video : { url:downloadvUrl }, caption: '> *©ᴘᴏᴡᴇʀᴇᴅ ʙʏ ɴᴀᴅᴇᴇɴ ᴘᴏᴏʀɴᴀ*', mimetype: 'video/mp4'},{ quoted: mek });
+                        break;
+                    case '2.2':
+                        let downviddoc = await fg.ytv(url);
+                        let downloadvdocUrl = downviddoc.dl_url;
+                        await conn.sendMessage(from, { document: { url:downloadvdocUrl }, caption: '> *©ᴘᴏᴡᴇʀᴇᴅ ʙʏ ɴᴀᴅᴇᴇɴ ᴘᴏᴏʀɴᴀ*', mimetype: 'video/mp4', fileName:data.title + ".mp4" }, { quoted: mek });
+                        break;
+                    default:
+                        reply("Invalid option. Please select a valid option🔴");
+                }
+
+            }
         });
-
-      
-        await conn.sendMessage(from, { text: videoInfo }, { quoted: mek });
 
     } catch (e) {
         console.error(e);
-        reply(`An error occurred: ${e.message}`);
+        await conn.sendMessage(from, { react: { text: '❌', key: mek.key } })
+        reply('An error occurred while processing your request.');
     }
 });
