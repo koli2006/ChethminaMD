@@ -2,7 +2,7 @@ cmd({
     pattern: "movie",
     react: "📥",
     description: "movie downloader",
-    use: ".movie kgf",
+    use: '.movie kgf',
     filename: __filename
 }, async (conn, mek, m, { from, q, isDev, reply }) => {
     if (!q) { return await reply('*Please provide a direct URL!*')}
