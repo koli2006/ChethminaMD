@@ -18,7 +18,7 @@ const data = search.videos[0];
 const url = data.url
 
 let desc = `
-🎧𝗖𝗞 𝗦𝗢𝗡𝗚 𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗𝗘𝗥🎧
+🎶𝗖𝗞 𝗦𝗢𝗡𝗚 𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗𝗘𝗥🎶
 
 🔖ᴛɪᴛʟᴇ: *${data.title}*
 ⏰ᴅᴜʀᴀᴛɪᴏɴ: *${data.timestamp}*
@@ -77,7 +77,7 @@ const vv = await conn.sendMessage(from, { image: { url: data.thumbnail }, captio
 cmd({
     pattern: "video",
     desc: "Download videos",
-    react: "📽️",
+    react: "🎥",
     category: "download",
     filename: __filename
 },
