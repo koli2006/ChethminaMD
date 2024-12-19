@@ -1,5 +1,5 @@
 cmd({
-    pattern: `movie`,
+    pattern: "movie",
     react: "📥",
     description: "movie downloader",
     use: ".movie kgf",
