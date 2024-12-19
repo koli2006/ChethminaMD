@@ -5,7 +5,7 @@ cmd({
     use: '.movie kgf',
     filename: __filename
 }, async (conn, mek, m, { from, q, isDev, reply }) => {
-    if (!q) { return await reply('*Please provide a direct URL!*')}
+    if (!q) { return await reply("*Please provide a direct URL!*")}
     try {
 
 const data0 = await fetchJson(`https://vajiraapi-089fa316ec80.herokuapp.com/movie/sinhalasub/search?text=${q}`);   
