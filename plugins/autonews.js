@@ -53,7 +53,7 @@ async function checkAndPostNews(conn, groupId) {
 
         if (!lastNewsTitles[groupId].includes(newsItem.title)) {
            await conn.sendMessage(groupId, { 
-                text: `██████𝗖𝗞 𝗡𝗲𝘄𝘀 𝟮𝟰𝘅𝟳"🇱🇰⚡️██████\n\n📰 *${newsItem.title}*\n✍🏻 ${newsItem.content}\n\n📅 ${newsItem.date}\n\n\n> 👨🏻‍💻 ᴍᴀᴅᴇ ʙʏ *ᴄʜᴇᴛʜᴍɪɴᴀ ᴋᴀᴠɪꜱʜᴀɴ*` 
+                text: `📰 *${newsItem.title}*\n✍🏻 ${newsItem.content}\n\n📅 ${newsItem.date}\n\n\n> 👨🏻‍💻 ᴍᴀᴅᴇ ʙʏ *ᴄʜᴇᴛʜᴍɪɴᴀ ᴋᴀᴠɪꜱʜᴀɴ*` 
             });
             lastNewsTitles[groupId].push(newsItem.title);
 
@@ -132,7 +132,7 @@ cmd({
                         delete activeGroups['interval'];
                     }
                 } else {
-                    await conn.sendMessage(from, { text: "🛑 24/7 News is not active in this group.\n\n> ©𝗡𝗔𝗗𝗘𝗘𝗡 𝗠𝗗" });
+                    await conn.sendMessage(from, { text: "🛑 24/7 News is not active in this group." });
                 }
             } else {
                 await conn.sendMessage(from, { text: "🚫 This command can only be used by group admins or the bot owner." });
