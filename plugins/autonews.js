@@ -17,27 +17,11 @@ async function getLatestNews() {
         newsData.push({
             title: hiruNews.results.title,
             content: hiruNews.results.news,
-            date: hiruNews.results.date
+            date: hiruNews.results.date,
+            thumb: hiruNews.results.thumb
         });
     } catch (err) {
         console.error(`Error fetching Hiru News: ${err.message}`);
-    }
-
-    // Esana News
-    try {
-        const esanaApi = new Esana();
-        const esanaNews = await esanaApi.getLatestNews(); 
-        if (esanaNews && esanaNews.title && esanaNews.description && esanaNews.publishedAt) {
-            newsData.push({
-                title: esanaNews.title,
-                content: esanaNews.description,
-                date: esanaNews.publishedAt
-            });
-        } else {
-            console.error("Error: Esana News returned invalid data.");
-        }
-    } catch (err) {
-        console.error(`Error fetching Esana News: ${err.message}`);
     }
 
     return newsData;
@@ -52,9 +36,7 @@ async function checkAndPostNews(conn, groupId) {
         }
 
         if (!lastNewsTitles[groupId].includes(newsItem.title)) {
-           await conn.sendMessage(groupId, { 
-                text: `██████𝗖𝗞 𝗡𝗲𝘄𝘀 𝟮𝟰𝘅𝟳"🇱🇰⚡️██████\n\n📰 *${newsItem.title}*\n✍🏻 ${newsItem.content}\n\n📅 ${newsItem.date}\n\n\n> 👨🏻‍💻 ᴍᴀᴅᴇ ʙʏ *ᴄʜᴇᴛʜᴍɪɴᴀ ᴋᴀᴠɪꜱʜᴀɴ*` 
-            });
+           await conn.sendMessage(groupId, { image: { url: ${newsItem.thumb}, caption: `📰 *${newsItem.title}*\n✍🏻 ${newsItem.content}\n\n📅 ${newsItem.date}\n\n\n> 👨🏻‍💻 ᴍᴀᴅᴇ ʙʏ *ᴄʜᴇᴛʜᴍɪɴᴀ ᴋᴀᴠɪꜱʜᴀɴ*`}, { quoted: mek }); 
             lastNewsTitles[groupId].push(newsItem.title);
 
             if (lastNewsTitles[groupId].length > 100) {
@@ -132,7 +114,7 @@ cmd({
                         delete activeGroups['interval'];
                     }
                 } else {
-                    await conn.sendMessage(from, { text: "🛑 24/7 News is not active in this group.\n\n> ©𝗡𝗔𝗗𝗘𝗘𝗡 𝗠𝗗" });
+                    await conn.sendMessage(from, { text: "🛑 24/7 News is not active in this group." });
                 }
             } else {
                 await conn.sendMessage(from, { text: "🚫 This command can only be used by group admins or the bot owner." });
