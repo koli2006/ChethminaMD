@@ -17,11 +17,27 @@ async function getLatestNews() {
         newsData.push({
             title: hiruNews.results.title,
             content: hiruNews.results.news,
-            date: hiruNews.results.date,
-            thumb: hiruNews.results.thumb
+            date: hiruNews.results.date
         });
     } catch (err) {
         console.error(`Error fetching Hiru News: ${err.message}`);
+    }
+
+    // Esana News
+    try {
+        const esanaApi = new Esana();
+        const esanaNews = await esanaApi.getLatestNews(); 
+        if (esanaNews && esanaNews.title && esanaNews.description && esanaNews.publishedAt) {
+            newsData.push({
+                title: esanaNews.title,
+                content: esanaNews.description,
+                date: esanaNews.publishedAt
+            });
+        } else {
+            console.error("Error: Esana News returned invalid data.");
+        }
+    } catch (err) {
+        console.error(`Error fetching Esana News: ${err.message}`);
     }
 
     return newsData;
@@ -36,7 +52,9 @@ async function checkAndPostNews(conn, groupId) {
         }
 
         if (!lastNewsTitles[groupId].includes(newsItem.title)) {
-           await conn.sendMessage(groupId, { image: { url: ${newsItem.thumb}, caption: `📰 *${newsItem.title}*\n✍🏻 ${newsItem.content}\n\n📅 ${newsItem.date}\n\n\n> 👨🏻‍💻 ᴍᴀᴅᴇ ʙʏ *ᴄʜᴇᴛʜᴍɪɴᴀ ᴋᴀᴠɪꜱʜᴀɴ*`}, { quoted: mek }); 
+           await conn.sendMessage(groupId, { 
+                text: `📰 *${newsItem.title}*\n\n${newsItem.content}\n\n📅 ${newsItem.date}\n\n\n> 👨🏻‍💻 ᴍᴀᴅᴇ ʙʏ *ᴄʜᴇᴛʜᴍɪɴᴀ ᴋᴀᴠɪꜱʜᴀɴ*` 
+            });
             lastNewsTitles[groupId].push(newsItem.title);
 
             if (lastNewsTitles[groupId].length > 100) {
