@@ -32,6 +32,7 @@
     "@bochilteam/scraper": "latest",
     "@sl-code-lords/si-subdl": "^1.1.1",
     "@sl-code-lords/esana-news": "latest",
+    "hirunews-scrap": "^1.1.2",
     "@ffmpeg-installer/ffmpeg": "^1.1.0",
     "@blackamda/telegram-image-url": "^1.0.0",
     "youtubedl-core": "^4.11.5",
