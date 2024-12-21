@@ -53,7 +53,7 @@ async function checkAndPostNews(conn, groupId) {
 
         if (!lastNewsTitles[groupId].includes(newsItem.title)) {
            await conn.sendMessage(groupId, { 
-                text: `*🔵𝐍𝐄𝐖𝐒 𝐀𝐋𝐄𝐑𝐓!*\n██████████████████████████████████████████\n\n\n📰 *${newsItem.title}*\n${newsItem.content}\n\n${newsItem.date}\n\n> *©ᴘᴏᴡᴇʀᴇᴅ ʙʏ ɴᴀᴅᴇᴇɴ ᴘᴏᴏʀɴᴀ*\n> *𝗡𝗔𝗗𝗘𝗘𝗡 - 𝗠𝗗*` 
+                text: `██████𝗖𝗞 𝗡𝗲𝘄𝘀 𝟮𝟰𝘅𝟳"🇱🇰⚡️██████\n\n📰 *${newsItem.title}*\n✍🏻 ${newsItem.content}\n\n📅 ${newsItem.date}\n\n\n> 👨🏻‍💻 ᴍᴀᴅᴇ ʙʏ *ᴄʜᴇᴛʜᴍɪɴᴀ ᴋᴀᴠɪꜱʜᴀɴ*` 
             });
             lastNewsTitles[groupId].push(newsItem.title);
 
@@ -82,7 +82,7 @@ cmd({
                 if (!activeGroups[from]) {
                     activeGroups[from] = true;
 
-                    await conn.sendMessage(from, { text: "🇱🇰 Auto 24/7 News Activated.\n\n> ©𝗡𝗔𝗗𝗘𝗘𝗡 𝗠𝗗" });
+                    await conn.sendMessage(from, { text: "🇱🇰 Auto 24/7 News Activated.\n\n> 👨🏻‍💻 ᴍᴀᴅᴇ ʙʏ *ᴄʜᴇᴛʜᴍɪɴᴀ ᴋᴀᴠɪꜱʜᴀɴ*" });
 
                     if (!activeGroups['interval']) {
                         activeGroups['interval'] = setInterval(async () => {
@@ -95,7 +95,7 @@ cmd({
                     }
 
                 } else {
-                    await conn.sendMessage(from, { text: "*✅ 24/7 News Already Activated.*\n\n> ©𝗡𝗔𝗗𝗘𝗘𝗡 𝗠𝗗" });
+                    await conn.sendMessage(from, { text: "*✅ 24/7 News Already Activated.*" });
                 }
             } else {
                 await conn.sendMessage(from, { text: "🚫 This command can only be used by group admins or the bot owner." });
