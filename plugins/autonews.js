@@ -36,10 +36,12 @@ async function checkAndPostNews(conn, groupId) {
             lastNewsTitles[groupId] = [];
         }
 
+let desc = `
+📰 *${newsItem.title}*\n\n${newsItem.content}\n\n📅 ${newsItem.date}\nRead More: ${newsItem.url}\n\n\n> 👨🏻‍💻 ᴍᴀᴅᴇ ʙʏ *ᴄʜᴇᴛʜᴍɪɴᴀ ᴋᴀᴠɪꜱʜᴀɴ*
+`
+
         if (!lastNewsTitles[groupId].includes(newsItem.title)) {
-           await conn.sendMessage(groupId, { 
-                text: `📰 *${newsItem.title}*\n\n${newsItem.content}\n\n📅 ${newsItem.date}\nRead More: ${newsItem.url}\n\n\n> 👨🏻‍💻 ᴍᴀᴅᴇ ʙʏ *ᴄʜᴇᴛʜᴍɪɴᴀ ᴋᴀᴠɪꜱʜᴀɴ*` 
-            });
+           await conn.sendMessage(groupId, { image: { url: data.thumb }, caption: desc }, { quoted: mek });
             lastNewsTitles[groupId].push(newsItem.title);
 
             if (lastNewsTitles[groupId].length > 100) {
