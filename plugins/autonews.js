@@ -18,13 +18,13 @@ async function getLatestNews() {
             title: hiruNews.results.title,
             content: hiruNews.results.news,
             date: hiruNews.results.date,
-            thumb: hiruNews.results.thumb,
             url: hiruNews.results.newsURL
         });
     } catch (err) {
         console.error(`Error fetching Hiru News: ${err.message}`);
     }
 
+    
     return newsData;
 }
 
@@ -36,10 +36,9 @@ async function checkAndPostNews(conn, groupId) {
             lastNewsTitles[groupId] = [];
         }
 
-
         if (!lastNewsTitles[groupId].includes(newsItem.title)) {
-           await conn.sendMessage(groupId, {
-               text: `📰 *${newsItem.title}*\n\n${newsItem.content}\n\n📅 ${newsItem.date}\n🔗Read More: ${newsItem.url}\n\n\n> 👨🏻‍💻 ᴍᴀᴅᴇ ʙʏ *ᴄʜᴇᴛʜᴍɪɴᴀ ᴋᴀᴠɪꜱʜᴀɴ*`
+           await conn.sendMessage(groupId, { 
+                text: `📰 *${newsItem.title}*\n\n${newsItem.content}\n\n📅 ${newsItem.date}\n🔗Read More: ${newsItem.url}\n\n\n> 👨🏻‍💻 ᴍᴀᴅᴇ ʙʏ *ᴄʜᴇᴛʜᴍɪɴᴀ ᴋᴀᴠɪꜱʜᴀɴ*` 
             });
             lastNewsTitles[groupId].push(newsItem.title);
 
@@ -95,7 +94,7 @@ cmd({
     }
 });
 
-// stop news
+// stop send news 
 cmd({
     pattern: "stopnews",
     desc: "Disable Sri Lankan news updates in this group",
