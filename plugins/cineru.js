@@ -1,3 +1,6 @@
+const config = require('../config')
+const {cmd , commands} = require('../command')
+
 cmd({
     pattern: "gdrive",
     alias: ["googledrive"],
