@@ -1,5 +1,17 @@
+const { fetchJson } = require('../lib/functions')
 const config = require('../config')
-const {cmd , commands} = require('../command')
+const { cmd, commands } = require('../command')
+
+// FETCH API URL
+let baseUrl;
+(async () => {
+    let baseUrlGet = await fetchJson(`https://raw.githubusercontent.com/prabathLK/PUBLIC-URL-HOST-DB/main/public/url.json`)
+    baseUrl = baseUrlGet.api
+})();
+
+
+const yourName = "> *©ᴘᴏᴡᴇʀᴇᴅ ʙʏ ꜱᴀʜᴀꜱ ᴛᴇᴄʜ*";
+
 
 cmd({
     pattern: "gdrive",
