@@ -6,7 +6,7 @@ const { cmd, commands } = require('../command')
 // FETCH API URL
 let baseUrl;
 (async () => {
-    let baseUrlGet = await fetchJson(`https://raw.githubusercontent.com/prabathLK/PUBLIC-URL-HOST-DB/main/public/url.json`)
+    let baseUrlGet = await fetchJson(`/download-gdrive?url=https://drive.google.com/file/d/13ZpPiGeI5AdMN9LWyaqgIoCWiiI6VbMp/edit&apikey=`)
     baseUrl = baseUrlGet.api
 })();
 
