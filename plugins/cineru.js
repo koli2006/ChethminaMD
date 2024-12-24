@@ -1,43 +1,65 @@
-import pkg from "nayan-videos-downloader";
-const { GDLink } = pkg;
-import config from '../../config.cjs';
+import fg from 'api-dylux';
 
-const gdriveDownload = async (m, Matrix) => {
-  const prefix = config.PREFIX;
-const cmd = m.body.startsWith(prefix) ? m.body.slice(prefix.length).split(' ')[0].toLowerCase() : '';
-const text = m.body.slice(prefix.length + cmd.length).trim();
+let handler = async (m, { conn, args, usedPrefix, command }) => {
+  if (!args[0]) throw `✨ *Enter a valid Google Drive link!* ✨`;
+  m.react(rwait);
 
-  const validCommands = ['gdrive', 'gd', 'gddownload'];
+  try {
+    let res = await fg.GDriveDl(args[0]);
+    let fileName = res.fileName;
+    let downloadUrl = res.downloadUrl;
+    let fileSize = res.fileSize;
+    let mimetype = res.mimetype;
 
-  if (validCommands.includes(cmd)) {
-    if (!text) return m.reply('Please provide a Google Drive URL.');
+    // Infer MIME type based on file extension if it's invalid or missing
+    if (!mimetype || mimetype === 'application/octet-stream') {
+      const extension = fileName.split('.').pop().toLowerCase();
+      const mimeTypes = {
+        pdf: 'application/pdf',
+        doc: 'application/msword',
+        docx: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+        xls: 'application/vnd.ms-excel',
+        xlsx: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+        txt: 'text/plain',
+        jpg: 'image/jpeg',
+        png: 'image/png',
+        zip: 'application/zip',
+        rar: 'application/vnd.rar',
+      };
 
-    try {
-      await m.React('🕘');
-
-      const gdriveUrl = text;
-      const gdriveInfo = await GDLink(gdriveUrl);
-
-      if (gdriveInfo && gdriveInfo.status && gdriveInfo.data) {
-        const mediaUrl = gdriveInfo.data;
-        const caption = `> © Powered By Ethix-MD`;
-
-        // Inferring the file type based on the file extension
-        const extension = mediaUrl.split('.').pop().toLowerCase();
-
-        // Send the media using Matrix.sendMedia
-        await Matrix.sendMedia(m.from, mediaUrl, extension, caption, m);
-
-        await m.React('✅');
-      } else {
-        throw new Error('Invalid response from Google Drive.');
-      }
-    } catch (error) {
-      console.error('Error downloading Google Drive file:', error.message);
-      m.reply('Error downloading Google Drive file.');
-      await m.React('❌');
+      mimetype = mimeTypes[extension] || 'application/octet-stream'; // Default to BIN type if unknown
     }
+
+    // Fancy reply with emojis and bold font
+    await m.reply(`
+🎯 *Google Drive File Details:*
+
+📝 *File Name:*  *${fileName}*
+📦 *File Size:*  *${fileSize}*
+📂 *File Type:*  *${mimetype}*
+
+⏬ _Sending your file now..._ ⏬
+    `);
+
+    // Send the file
+    conn.sendMessage(m.chat, {
+      document: { url: downloadUrl },
+      fileName,
+      mimetype,
+    }, { quoted: m });
+
+    m.react(done);
+
+  } catch (e) {
+    console.error(e);
+    m.reply('⚠️ *Error:* Check the link or try another link!');
   }
 };
 
-export default gdriveDownload;
+handler.help = ['gdrive'];
+handler.tags = ['downloader'];
+handler.command = ['drive', 'gdrive'];
+handler.credit = false;
+handler.premium = false;
+
+export default handler;
