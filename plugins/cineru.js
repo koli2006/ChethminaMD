@@ -1,4 +1,4 @@
-import pkg from "nayan-video-downloader";
+import pkg from "nayan-videos-downloader";
 const { GDLink } = pkg;
 import config from '../../config.cjs';
 
