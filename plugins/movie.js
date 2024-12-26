@@ -177,7 +177,6 @@ let mfg = `*DOWNLOAD MOVIE*
 cmd({
     pattern: "fit",
     react: "📥",
-    dontAddCommandList: true,
     filename: __filename
 }, async (conn, mek, m, { from, q, isMe, reply }) => {
 	
