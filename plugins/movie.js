@@ -1,243 +1,707 @@
-function _0x25df(_0x5171cc, _0x9b1aa5) {
-  const _0x235953 = _0x4e00();
-  _0x25df = function (_0x32eb1f, _0x13acc1) {
-    _0x32eb1f = _0x32eb1f - 430;
-    let _0x1d0cfa = _0x235953[_0x32eb1f];
-    if (_0x25df.nNrvDr === undefined) {
-      var _0x509345 = function (_0x4661a2) {
-        let _0x560340 = '';
-        let _0x5a2329 = '';
-        let _0x491f5f = _0x560340 + _0x509345;
-        let _0x2a0ba0 = 0;
-        let _0x5c2bd8;
-        let _0x243e13;
-        for (let _0x154a61 = 0; _0x243e13 = _0x4661a2.charAt(_0x154a61++); ~_0x243e13 && (_0x5c2bd8 = _0x2a0ba0 % 4 ? _0x5c2bd8 * 64 + _0x243e13 : _0x243e13, _0x2a0ba0++ % 4) ? _0x560340 += _0x491f5f.charCodeAt(_0x154a61 + 10) - 10 !== 0 ? String.fromCharCode(255 & _0x5c2bd8 >> (-2 * _0x2a0ba0 & 6)) : _0x2a0ba0 : 0) {
-          _0x243e13 = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/='.indexOf(_0x243e13);
-        }
-        let _0x22d5d6 = 0;
-        for (let _0x137a6e = _0x560340.length; _0x22d5d6 < _0x137a6e; _0x22d5d6++) {
-          _0x5a2329 += '%' + ('00' + _0x560340.charCodeAt(_0x22d5d6).toString(16)).slice(-2);
-        }
-        return decodeURIComponent(_0x5a2329);
-      };
-      _0x25df.ePeJCG = _0x509345;
-      _0x5171cc = arguments;
-      _0x25df.nNrvDr = true;
-    }
-    const _0x2a9092 = _0x235953[0];
-    const _0x4bd426 = _0x32eb1f + _0x2a9092;
-    const _0x250331 = _0x5171cc[_0x4bd426];
-    if (!_0x250331) {
-      const _0x51109d = function (_0x2f59f8) {
-        this.nKTnHQ = _0x2f59f8;
-        this.WdLkJF = [1, 0, 0];
-        this.CBneib = function () {
-          return 'newState';
-        };
-        this.mfAwmT = "\\w+ *\\(\\) *{\\w+ *";
-        this.DpzyYc = "['|\"].+['|\"];? *}";
-      };
-      _0x51109d.prototype.liIlsk = function () {
-        const _0x4c4f9f = new RegExp(this.mfAwmT + this.DpzyYc);
-        const _0x2be270 = _0x4c4f9f.test(this.CBneib.toString()) ? --this.WdLkJF[1] : --this.WdLkJF[0];
-        return this.JeGkVv(_0x2be270);
-      };
-      _0x51109d.prototype.JeGkVv = function (_0x566f0a) {
-        if (!Boolean(~_0x566f0a)) {
-          return _0x566f0a;
-        }
-        return this.AxNofr(this.nKTnHQ);
-      };
-      _0x51109d.prototype.AxNofr = function (_0x5eac32) {
-        let _0x1a1a04 = 0;
-        for (let _0x3299aa = this.WdLkJF.length; _0x1a1a04 < _0x3299aa; _0x1a1a04++) {
-          this.WdLkJF.push(Math.round(Math.random()));
-          _0x3299aa = this.WdLkJF.length;
-        }
-        return _0x5eac32(this.WdLkJF[0]);
-      };
-      new _0x51109d(_0x25df).liIlsk();
-      _0x1d0cfa = _0x25df.ePeJCG(_0x1d0cfa);
-      _0x5171cc[_0x4bd426] = _0x1d0cfa;
-    } else {
-      _0x1d0cfa = _0x250331;
-    }
-    return _0x1d0cfa;
-  };
-  return _0x25df(_0x5171cc, _0x9b1aa5);
-}
-(function (_0xa1a4bb, _0x57d9e1) {
-  const _0xe5ad76 = _0xa1a4bb();
-  while (true) {
-    try {
-      const _0x2133c3 = -parseInt(_0x25df(505, 0x4eb)) / 1 * (-parseInt(_0x25df(490, -0x6f)) / 2) + parseInt(_0x25df(445, 0x4de)) / 3 + -parseInt(_0x25df(468, 0x4dc)) / 4 * (-parseInt(_0x25df(509, 0x530)) / 5) + parseInt(_0x25df(483, 0x514)) / 6 * (-parseInt(_0x25df(469, 0x4e0)) / 7) + parseInt(_0x25df(444, 0x4e9)) / 8 + parseInt(_0x25df(487, -0x5a)) / 9 * (-parseInt(_0x25df(515, -0x34)) / 10) + -parseInt(_0x25df(460, -0xc1)) / 11;
-      if (_0x2133c3 === _0x57d9e1) {
-        break;
-      } else {
-        _0xe5ad76.push(_0xe5ad76.shift());
-      }
-    } catch (_0x8f4577) {
-      _0xe5ad76.push(_0xe5ad76.shift());
-    }
-  }
-})(_0x4e00, 859838);
-function _0x4e00() {
-  const _0x1457d1 = ['CM4GDgHPCYiPka', 'DxnL', 'yxbPlwr5Bhv4', 'mJa4mZeXm1bdr1fcCa', 'ufjZAMy', 'iog0JEg0NmQF4BsBYAOG4Bsf4Bsh4BsG', 'mtKWndritwTXBNu', 'rgzwu2K', 'CxnhwK8', 'yMLUza', 'lMDKCML2zsa8zW', 'B29NBgvKCML2zq', 'ELPot0W', 'y2LltKG', 'y3rVCIGICMv0Dq', 'kcGOlISPkYKRkq', 'y29UC29Szq', 'BMn0Aw9UkcKG', 'y2f0zwDVCNK', 'cUkSH++4JYaGkKnzqKvs', 'AfDgzuC', 'ntbvCvDuA2K', 'E30Uy29UC3rYDq', 'Cgf0DgvYBG', 'sMrjDxm', 'mZG2mdvlu3vfB3q', 'uvfVrgS', 'kIaG4QYh77IpcGOQ8j+tGYbg', 'Be9jzw0', '4BsG4BspYP8TYARjQIOkkUg0Ma', 'C2vHCMnO', 'mtb6zKThD1u', 'cIRWN5w577IpiezPBguGDa', 'qw5JAum', 'yMXPyYbjDcO', 'CKreyxm', 'kLbSzwfZzsbNAq', 'r2PZuxm', 'CMv0DxjUicHMDq', 'CMvHy3q', 'lI4Vy29UzMLN', 'CxvVDgvK', 'zMLSzw5HBwu', 'zg9JDw1LBNq', 'DhPxsNq', 'y3LIzxjFz2q', 'uwTiCuu', 'y3rPB25Z', 'wMfcsLy', 'Aw5MBW', 'Dg9tDhjPBMC', 'tLjKDKu', 'mtm0nduZodrxDgrIDMm', 'ndq4mti1m2Lste13wq', 'ywXPyxm', 'CvvytNC', 'DNLjCxO', 'D2fYBG', 'BgvKCML2zsb1CG', 'r0rYAxzLrgW', 'ChjVDg90ExbL', 'Bc4UlIeHkG', 'C2vUze1LC3nHzW', 'rMPqrNq', 'zgvZyW', 'z2nRC0m', 'y29UC3rYDwn0BW', 'YARHTitHTiCGYPNHTi/HTjSGoIa', 'mJKXmdG2nJjLEgHirfK', 'AxPLoIOG', 'vwXAwfu', 'yxbWBhK', 'zxHJzxb0Aw9U', 'kKvYCM9YlI4Hia', 'lI4Vy29TBwfUza', 'lI4VBgLIl2z1BG', 'nZe2vNHjzKjZ', 'ndj5u1vLAg4', 'uNHqDu0', 'zMLSzu5HBwu', 'tw1IufG', 'rg93BMXVywqGzW', 're9xtKXpqurfuG', 'Bg9N', '4Bsp4BsH4BshYOdHTiFHTiuGYPNkJYa', 'BwLTzxr5Cgu', 'DgfIBgu', 'DhjHy2u', 'cGOQ4BseYO/kMEg0H8QalxG', 'igXPBMS+', 'DMuGBwuGz29VzW', 'mti5nta0nK5KCuv2Ca'];
-  _0x4e00 = function () {
-    return _0x1457d1;
-  };
-  return _0x4e00();
-}
-const _0x220b17 = function () {
-  let _0x59e136 = true;
-  return function (_0x2fbed3, _0xd68770) {
-    const _0x54fb55 = {
-      PRsjf: function (_0x4ca803, _0x5cd4ac) {
-        return _0x4ca803 === _0x5cd4ac;
-      }
-    };
-    _0x54fb55.AnciC = "JdIus";
-    const _0x36256e = _0x59e136 ? function () {
-      if (_0x54fb55.AnciC === _0x54fb55.AnciC) {
-        if (_0xd68770) {
-          const _0xe6fcde = _0xd68770.apply(_0x2fbed3, arguments);
-          _0xd68770 = null;
-          return _0xe6fcde;
-        }
-      } else {
-        const _0x1ee8ed = _0x448534 ? function () {
-          if (_0x3cf105) {
-            const _0x5075f6 = _0x8d507e.apply(_0x35a7d0, arguments);
-            _0xd8c454 = null;
-            return _0x5075f6;
-          }
-        } : function () {};
-        _0x1cedd0 = false;
-        return _0x1ee8ed;
-      }
-    } : function () {};
-    _0x59e136 = false;
-    return _0x36256e;
-  };
-}();
-const _0x3a6ba9 = _0x220b17(this, function () {
-  return _0x3a6ba9.toString().search("(((.+)+)+)+$").toString().constructor(_0x3a6ba9).search("(((.+)+)+)+$");
-});
-_0x3a6ba9();
-function _0xe17140(_0x2f1f40, _0x341efb, _0x50b9e6, _0x1cb137) {
-  return _0x25df(_0x2f1f40 + 0x41, _0x50b9e6);
-}
-const _0x19d2ec = function () {
-  let _0x1f2492 = true;
-  return function (_0x4e3e70, _0x2a21b1) {
-    const _0x3a166b = _0x1f2492 ? function () {
-      if (_0x2a21b1) {
-        const _0x72c0dd = _0x2a21b1.apply(_0x4e3e70, arguments);
-        _0x2a21b1 = null;
-        return _0x72c0dd;
-      }
-    } : function () {};
-    _0x1f2492 = false;
-    return _0x3a166b;
-  };
-}();
-const _0x3c3d61 = _0x19d2ec(this, function () {
-  const _0x19f82c = function () {
-    let _0xef48a8;
-    try {
-      _0xef48a8 = Function("return (function() {}.constructor(\"return this\")( ));")();
-    } catch (_0x548be8) {
-      _0xef48a8 = window;
-    }
-    return _0xef48a8;
-  };
-  const _0x28b4b3 = _0x19f82c();
-  const _0x1fc0dd = _0x28b4b3.console = _0x28b4b3.console || {};
-  const _0x5490ad = ["log", "warn", "info", 'error', "exception", "table", "trace"];
-  for (let _0x3892f8 = 0; _0x3892f8 < _0x5490ad.length; _0x3892f8++) {
-    const _0x9d5f70 = _0x19d2ec.constructor.prototype.bind(_0x19d2ec);
-    const _0x5bd0a2 = _0x5490ad[_0x3892f8];
-    const _0x493dd = _0x1fc0dd[_0x5bd0a2] || _0x9d5f70;
-    _0x9d5f70.__proto__ = _0x19d2ec.bind(_0x19d2ec);
-    _0x9d5f70.toString = _0x493dd.toString.bind(_0x493dd);
-    _0x1fc0dd[_0x5bd0a2] = _0x9d5f70;
-  }
-});
-_0x3c3d61();
-function _0xc4c41a(_0x5dd654, _0x17cdf1, _0x3d698e, _0x1c8449) {
-  return _0x25df(_0x3d698e - 0x184, _0x17cdf1);
-}
-const fg = require("api-dylux");
 const {
   cmd,
   commands
 } = require("../command");
 const {
-  getBuffer,
-  getGroupAdmins,
-  getRandom,
-  h2k,
-  isUrl,
-  Json,
-  runtime,
-  sleep,
   fetchJson
 } = require("../lib/functions");
-const _0x3f425a = {
-  pattern: 'ckcm',
-  alias: ["googledrive", 'gd', "cyber_gd"],
-  react: '📑',
-  desc: "Download googledrive files.",
-  category: 'download',
-  use: ".ckcm <googledrive link>",
-  filename: __filename
-};
-cmd(_0x3f425a, async (_0x4a6368, _0x4eb1fc, _0x992cb7, {
-  from: _0x437561,
-  l: _0x557d7a,
-  quoted: _0x59fa34,
-  body: _0x5a081a,
-  isCmd: _0x4fc32a,
-  command: _0x17cdc6,
-  args: _0x975d20,
-  q: _0x3da772,
-  isGroup: _0x4b9bb6,
-  sender: _0x2a3450,
-  senderNumber: _0x32152d,
-  botNumber2: _0x2534b9,
-  botNumber: _0x56f55e,
-  pushname: _0x15ff3c,
-  isMe: _0xfc8162,
-  isOwner: _0x1c72bb,
-  groupMetadata: _0x2bd40d,
-  groupName: _0xae0f20,
-  participants: _0x3c0371,
-  groupAdmins: _0x499ec4,
-  isBotAdmins: _0x46ecf9,
-  isAdmins: _0x1178df,
-  reply: _0x10d62d
+const fg = require('api-dylux');
+const axios = require("axios");
+const {
+  Buffer
+} = require("buffer");
+const apkdl = require("../lib/apkdl");
+cmd({
+  'pattern': "img",
+  'desc': "Search and send images from Google with multiple format options.",
+  'react': "🖼️",
+  'category': "download",
+  'filename': __filename
+}, async (_0x535903, _0x4bcc54, _0x3bc9b4, {
+  from: _0x2700fc,
+  reply: _0x1725b7,
+  q: _0x931d56,
+  pushname: _0x5d187e
 }) => {
   try {
-    if (!_0x3da772) {
-      return _0x10d62d("*Please give me googledrive url...!!*");
+    if (!_0x931d56) {
+      return _0x1725b7("Please provide a search query for the image.");
     }
-    let _0xd27439 = await fg.GDriveDl(_0x3da772);
-    _0x10d62d("\n🎬𝗖𝗞 𝗖𝗶𝗻𝗲𝗠𝗔𝗫🎬\n\n*📃 ꜰɪʟᴇ ɴᴀᴍᴇ:*  " + _0xd27439.fileName + "\n*💈 ꜰɪʟᴇ ꜱɪᴢᴇ:* " + _0xd27439.fileSize + "\n\n> 👨🏻‍💻 ᴍᴀᴅᴇ ʙʏ *ᴄʜᴇᴛʜᴍɪɴᴀ ᴋᴀᴠɪꜱʜᴀɴ*");
-    const _0x2344b5 = {
-      'url': _0xd27439.downloadUrl
-    };
-    const _0x2a312c = {
-      document: _0x2344b5,
-      fileName: _0xd27439.fileName,
-      mimetype: _0xd27439.mimetype,
-      caption: _0xd27439.fileName
-    };
-    const _0x4c9582 = {
-      quoted: _0x4eb1fc
-    };
-    _0x4a6368.sendMessage(_0x437561, _0x2a312c, _0x4c9582);
-  } catch (_0x2bd223) {
-    _0x10d62d("*Error..! Your Url is Private. Please Public It*");
-    _0x557d7a(_0x2bd223);
+    const _0x117d3e = encodeURIComponent(_0x931d56);
+    const _0x19d195 = "https://www.googleapis.com/customsearch/v1?q=" + _0x117d3e + "&cx=" + "45b94c5cef39940d1" + "&key=" + "AIzaSyDebFT-uY_f82_An6bnE9WvVcgVbzwDKgU" + '&searchType=image&num=5';
+    const _0x929448 = await axios.get(_0x19d195);
+    const _0x2ab570 = _0x929448.data;
+    if (!_0x2ab570.items || _0x2ab570.items.length === 0x0) {
+      return _0x1725b7("No images found for your query.");
+    }
+    const _0x5f2fbd = "\n\n🌟 Hello, " + (_0x5d187e || "User") + "! 🌟\n\nSearch Query: " + _0x931d56 + "\n\nReply with a number below\n\n1 || Send images in normal format\n\n2 || Send images as document format\n\n> *Made By Dark Cyber Maker ™*";
+    const _0x41dc17 = await _0x535903.sendMessage(_0x2700fc, {
+      'text': _0x5f2fbd
+    }, {
+      'quoted': _0x4bcc54
+    });
+    _0x535903.ev.on("messages.upsert", async _0x59f9e4 => {
+      const _0x47524d = _0x59f9e4.messages[0x0];
+      if (!_0x47524d.message || !_0x47524d.message.extendedTextMessage) {
+        return;
+      }
+      const _0x5ca41e = _0x47524d.message.extendedTextMessage.text.trim();
+      if (_0x47524d.message.extendedTextMessage.contextInfo && _0x47524d.message.extendedTextMessage.contextInfo.stanzaId === _0x41dc17.key.id) {
+        if (_0x5ca41e === '1') {
+          for (let _0x154014 = 0x0; _0x154014 < _0x2ab570.items.length; _0x154014++) {
+            const _0x30b440 = _0x2ab570.items[_0x154014].link;
+            const _0x174a41 = await axios.get(_0x30b440, {
+              'responseType': 'arraybuffer'
+            });
+            const _0x350468 = Buffer.from(_0x174a41.data, "binary");
+            await _0x535903.sendMessage(_0x2700fc, {
+              'image': _0x350468,
+              'caption': "\n\n🌟 Image " + (_0x154014 + 0x1) + " from your search! 🌟\n\n        Enjoy these images! 📸\n\n> *Made By Dark Cyber Maker ™* \n\n                            "
+            }, {
+              'quoted': _0x47524d
+            });
+          }
+        } else {
+          if (_0x5ca41e === '2') {
+            for (let _0x32cabb = 0x0; _0x32cabb < _0x2ab570.items.length; _0x32cabb++) {
+              const _0x3e0680 = _0x2ab570.items[_0x32cabb].link;
+              const _0x47b466 = await axios.get(_0x3e0680, {
+                'responseType': 'arraybuffer'
+              });
+              const _0x2a08df = Buffer.from(_0x47b466.data, 'binary');
+              await _0x535903.sendMessage(_0x2700fc, {
+                'document': _0x2a08df,
+                'fileName': "Image_" + (_0x32cabb + 0x1) + '.jpg',
+                'mimetype': "image/jpeg",
+                'caption': "\n\n🖼️ Image " + (_0x32cabb + 0x1) + " from your search! 🖼️\n\n        Enjoy these images! 📸\n\n> *Made By Dark Cyber Maker ™* \n\n                            "
+              }, {
+                'quoted': _0x47524d
+              });
+            }
+          } else {
+            await _0x535903.sendMessage(_0x2700fc, {
+              'text': "❌ Invalid option. Please reply with either 1 or 2."
+            }, {
+              'quoted': _0x47524d
+            });
+          }
+        }
+      }
+    });
+  } catch (_0x1dc97a) {
+    console.error(_0x1dc97a);
+    _0x1725b7("Error: " + _0x1dc97a.message);
+  }
+});
+cmd({
+  'pattern': "tiktok",
+  'alias': ['tt', 'ttdown'],
+  'desc': "Download For Tiktok Videos",
+  'category': 'download',
+  'filename': __filename
+}, async (_0x1d9a68, _0x5d5907, _0x1b564b, {
+  from: _0x30f9da,
+  quoted: _0x96fcef,
+  reply: _0x22a89a,
+  q: _0x22018d
+}) => {
+  try {
+    if (!_0x22018d) {
+      return await _0x22a89a("Please give me tiktok url");
+    }
+    if (!_0x22018d.includes('tiktok.com')) {
+      return await _0x22a89a("This url is invalid");
+    }
+    const _0x4e4dec = await fetchJson("https://www.dark-yasiya-api.site/download/tiktok?url=" + _0x22018d);
+    const _0x5e1cb4 = "🎬 𝗦𝗘𝗢𝗡 𝗠𝗗 𝗧𝗜𝗞𝗧𝗢𝗞 𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗𝗘𝗥 📥\n\n*★| TITLE :* " + _0x4e4dec.result.title + "\n\n*★| Author :* " + _0x4e4dec.result.author + "\n\n*★| DURATION :* " + _0x4e4dec.result.duration + "\n\n*★| VIEWS :* " + _0x4e4dec.result.views + "\n\n*★| URL :* " + _0x22018d + "\n\n📥 | Choose Download Format\n\n1. 🎬 With Watermark\n\n2. 📙 Without Watermark\n\n3. 🎧 Audio File\n\n> *Made By Dark Cyber Maker ™*";
+    const _0x5ac3a3 = await _0x1d9a68.sendMessage(_0x30f9da, {
+      'image': {
+        'url': _0x4e4dec.result.cover || ''
+      },
+      'caption': _0x5e1cb4
+    }, {
+      'quoted': _0x5d5907
+    });
+    _0x1d9a68.ev.on("messages.upsert", async _0x533eb8 => {
+      const _0x408387 = _0x533eb8.messages[0x0];
+      if (!_0x408387.message || !_0x408387.message.extendedTextMessage) {
+        return;
+      }
+      if (_0x408387.message.extendedTextMessage.contextInfo && _0x408387.message.extendedTextMessage.contextInfo.stanzaId === _0x5ac3a3.key.id) {
+        const _0x7eff89 = _0x408387.message.extendedTextMessage.text.trim();
+        try {
+          switch (_0x7eff89) {
+            case '3':
+              await _0x1d9a68.sendMessage(_0x30f9da, {
+                'audio': {
+                  'url': _0x4e4dec.result.sound
+                },
+                'mimetype': "audio/mpeg"
+              }, {
+                'quoted': _0x5d5907
+              });
+              break;
+            case '1':
+              await _0x1d9a68.sendMessage(_0x30f9da, {
+                'video': {
+                  'url': _0x4e4dec.result.wmVideo
+                },
+                'mimetype': "video/mp4",
+                'caption': _0x4e4dec.result.title + "\n\nWATERMARK VIDEO ✅\n\n> *Made By Dark Cyber Maker ™*"
+              }, {
+                'quoted': _0x5d5907
+              });
+              break;
+            case '2':
+              await _0x1d9a68.sendMessage(_0x30f9da, {
+                'video': {
+                  'url': _0x4e4dec.result.hdVideo
+                },
+                'mimetype': "video/mp4",
+                'caption': _0x4e4dec.result.title + "\n\nNO-WATERMARK VIDEO ✅\n\n> *Made By Dark Cyber Maker ™*"
+              }, {
+                'quoted': _0x5d5907
+              });
+              break;
+            default:
+              _0x22a89a("Invalid option. Please select a valid option 🔴");
+          }
+        } catch (_0x34fcf9) {
+          console.log(_0x34fcf9);
+          _0x22a89a('' + _0x34fcf9);
+        }
+      }
+    });
+  } catch (_0x1af66f) {
+    console.log(_0x1af66f);
+    _0x22a89a('' + _0x1af66f);
+  }
+});
+cmd({
+  'pattern': "mediafire",
+  'alias': ['mf', "mfire"],
+  'react': '🔥',
+  'desc': "Download Your Mediafire Files.",
+  'category': 'download',
+  'filename': __filename
+}, async (_0x4e8235, _0x3649f1, _0x2a88bd, {
+  from: _0x28abb4,
+  quoted: _0x478c68,
+  reply: _0x5b53ec,
+  q: _0x885216
+}) => {
+  try {
+    if (!_0x885216) {
+      return await _0x5b53ec("Please give me mediafire url");
+    }
+    if (!_0x885216.includes("mediafire.com")) {
+      return await _0x5b53ec("This url is invalid");
+    }
+    const _0xd26997 = await fetchJson("https://www.dark-yasiya-api.site/download/mfire?url=" + _0x885216);
+    const _0x2ac6d0 = "📙 𝗦𝗘𝗢𝗡 𝗠𝗗 𝗠𝗘𝗗𝗜𝗔𝗙𝗜𝗥𝗘 𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗𝗘𝗥 📥\n\n*★| File Name :* " + _0xd26997.result.fileName + "\n\n*★| File Size :* " + _0xd26997.result.size + "\n\n*★| Upload Date and Time :* " + _0xd26997.result.date + "\n\n> *Made By Dark Cyber Maker ™*";
+    await _0x4e8235.sendMessage(_0x28abb4, {
+      'image': {
+        'url': "https://i.ibb.co/dPw1fHD/mfire.jpg"
+      },
+      'caption': _0x2ac6d0
+    }, {
+      'quoted': _0x3649f1
+    });
+    await _0x4e8235.sendMessage(_0x28abb4, {
+      'document': {
+        'url': _0xd26997.result.dl_link
+      },
+      'mimetype': _0xd26997.result.fileType,
+      'fileName': _0xd26997.result.fileName,
+      'caption': _0xd26997.result.fileName + "\n\n> *Made By Dark Cyber Maker ™*"
+    }, {
+      'quoted': _0x3649f1
+    });
+  } catch (_0x3786c2) {
+    console.log(_0x3786c2);
+    _0x5b53ec('' + _0x3786c2);
+  }
+});
+cmd({
+  'pattern': "xvideo",
+  'alias': ['xvdl', 'xvdown'],
+  'react': '🔞',
+  'desc': "Download Xvideos.",
+  'category': "download",
+  'filename': __filename
+}, async (_0x1de039, _0x5f4817, _0x28da20, {
+  from: _0xfb1131,
+  quoted: _0x3d2d24,
+  reply: _0x153351,
+  q: _0x45cf20
+}) => {
+  try {
+    if (!_0x45cf20) {
+      return await _0x153351("Please give me few word !");
+    }
+    const _0xb8c91a = await fetchJson("https://www.dark-yasiya-api.site/search/xvideo?q=" + _0x45cf20);
+    if (_0xb8c91a.result.length < 0x0) {
+      return await _0x153351("Not results found !");
+    }
+    const _0x51dd58 = await fetchJson("https://www.dark-yasiya-api.site/download/xvideo?url=" + _0xb8c91a.result[0x0].url);
+    const _0x5051b5 = "💋 𝗦𝗘𝗢𝗡 𝗠𝗗 𝗫𝗩𝗜𝗗𝗘𝗢𝗦 𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗𝗘𝗥 📥\n\n*★| Video Title :* " + _0x51dd58.result.title + "\n\n*★| Views :* " + _0x51dd58.result.views + "\n\n*★| Like :* " + _0x51dd58.result.like + "\n\n*★| Deslink :* " + _0x51dd58.result.deslike + "\n\n*★| Size :* " + _0x51dd58.result.size + "\n\n> *Made By Dark Cyber Maker ™*";
+    await _0x1de039.sendMessage(_0xfb1131, {
+      'image': {
+        'url': _0x51dd58.result.image || ''
+      },
+      'caption': _0x5051b5
+    }, {
+      'quoted': _0x5f4817
+    });
+    await _0x1de039.sendMessage(_0xfb1131, {
+      'document': {
+        'url': _0x51dd58.result.dl_link
+      },
+      'mimetype': 'video/mp4',
+      'fileName': _0x51dd58.result.title,
+      'caption': "> *Made By Dark Cyber Maker ™*"
+    }, {
+      'quoted': _0x5f4817
+    });
+  } catch (_0x503dd7) {
+    console.log(_0x503dd7);
+    _0x153351('' + _0x503dd7);
+  }
+});
+cmd({
+  'pattern': 'fb',
+  'react': '📑',
+  'desc': "Download googledrive files.",
+  'category': "download",
+  'use': ".gdrive <googledrive link>",
+  'filename': __filename
+}, async (_0xf9022e, _0x3bf8cc, _0x1397ef, {
+  from: _0x18a7ed,
+  l: _0x4716a3,
+  quoted: _0x4b43b9,
+  body: _0xdc9b47,
+  isCmd: _0x2309cb,
+  command: _0xd28a43,
+  args: _0x1ab591,
+  q: _0x4e98b7,
+  isGroup: _0x126684,
+  sender: _0x2a8fba,
+  senderNumber: _0x5d3bc2,
+  botNumber2: _0x3b0f1e,
+  botNumber: _0x7bfca5,
+  pushname: _0x39e208,
+  isMe: _0x24c693,
+  isOwner: _0x396d8b,
+  groupMetadata: _0x5d5b58,
+  groupName: _0x598a6c,
+  participants: _0x191f9c,
+  groupAdmins: _0x34cc73,
+  isBotAdmins: _0x2d2245,
+  isAdmins: _0x47f2b5,
+  reply: _0x58d28d
+}) => {
+  try {
+    if (!_0x4e98b7) {
+      return await _0x58d28d("*Please give me googledrive url !!*");
+    }
+    let _0x48e6e6 = await fg.fbdl;
+    _0x58d28d("fb downlorder");
+    _0xf9022e.sendMessage(_0x18a7ed, {
+      'document': {
+        'url': _0x48e6e6.downloadUrl
+      },
+      'fileName': _0x48e6e6.fileName,
+      'mimetype': _0x48e6e6.mimetype
+    }, {
+      'quoted': _0x3bf8cc
+    });
+  } catch (_0x6e1f4e) {
+    _0x58d28d("*Error !!*");
+    _0x4716a3(_0x6e1f4e);
+  }
+});
+cmd({
+  'pattern': "gdrive",
+  'alias': ["googledrive'"],
+  'react': '📑',
+  'desc': "Download Google Drive Files",
+  'category': "download",
+  'filename': __filename
+}, async (_0x303b77, _0x33ae31, _0xb74742, {
+  from: _0x34e208,
+  l: _0xda7c8b,
+  quoted: _0x126dbf,
+  body: _0x145ce3,
+  isCmd: _0x3ec93d,
+  command: _0x5bdf36,
+  args: _0x60b9ee,
+  q: _0x31f045,
+  isGroup: _0x29e962,
+  sender: _0xbb9c3a,
+  senderNumber: _0x52d3c1,
+  botNumber2: _0x23fe3b,
+  botNumber: _0x10c6d4,
+  pushname: _0x3303b8,
+  isMe: _0x5e4bcc,
+  isOwner: _0x135094,
+  groupMetadata: _0x4bfafd,
+  groupName: _0xb74550,
+  participants: _0x4bfc29,
+  groupAdmins: _0x391a2c,
+  isBotAdmins: _0x460969,
+  isAdmins: _0x41eb0a,
+  reply: _0x3652cf
+}) => {
+  try {
+    if (!_0x31f045) {
+      return await _0x3652cf("*Please give me googledrive url !!*");
+    }
+    let _0xc716df = await fg.GDriveDl(_0x31f045);
+    _0x3652cf("*📃 File name:*  " + _0xc716df.fileName + "\n\n*💈 File Size:* " + _0xc716df.fileSize + "\n\n*🕹️ File type:* " + _0xc716df.mimetype + "\n\n> *Made By Dark Cyber Maker ™*");
+    _0x303b77.sendMessage(_0x34e208, {
+      'document': {
+        'url': _0xc716df.downloadUrl
+      },
+      'fileName': _0xc716df.fileName,
+      'mimetype': _0xc716df.mimetype
+    }, {
+      'quoted': _0x33ae31
+    });
+  } catch (_0x13804b) {
+    _0x3652cf("*Error !!*");
+    _0xda7c8b(_0x13804b);
+  }
+});
+cmd({
+  'pattern': "twitter",
+  'alias': ['x', "twit", "twitterdl"],
+  'react': '🌀',
+  'desc': "Download For Twitter",
+  'category': "download",
+  'filename': __filename
+}, async (_0x30b621, _0x330f83, _0xcd29c0, {
+  from: _0x34ec03,
+  l: _0x28e891,
+  prefix: _0x29de41,
+  quoted: _0x1cc423,
+  body: _0x9001ab,
+  isCmd: _0x218a39,
+  command: _0x36fb6d,
+  args: _0x40392b,
+  q: _0x2fec1c,
+  isGroup: _0x5c9e9c,
+  sender: _0xef5a6e,
+  senderNumber: _0x5cb900,
+  botNumber2: _0x1e3d01,
+  botNumber: _0x47df83,
+  pushname: _0xd891ea,
+  isMe: _0x178caf,
+  isOwner: _0x301e05,
+  groupMetadata: _0x3e9aff,
+  groupName: _0x29ef8d,
+  participants: _0x164f2b,
+  groupAdmins: _0x5577ce,
+  isBotAdmins: _0x510166,
+  isAdmins: _0x2aeb4c,
+  reply: _0x5724c0
+}) => {
+  try {
+    const _0x4da5ce = await fetchJson('https://www.dark-yasiya-api.site/download/twitter?url=/download/twitter?url=' + _0x2fec1c);
+    let _0x37a97d = "📹 𝗦𝗘𝗢𝗡 𝗠𝗗 𝗧𝗪𝗜𝗧𝗧𝗘𝗥 𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗𝗘𝗥 📥\n\n*★| Title :* " + _0x4da5ce.result.desc + "\n\n> *Made By Dark Cyber Maker ™*\n\n";
+    const _0x42a7f4 = await _0x30b621.sendMessage(_0x34ec03, {
+      'image': {
+        'url': tiktok.result.cover || ''
+      },
+      'caption': _0x37a97d
+    }, {
+      'quoted': _0x330f83
+    });
+    _0x30b621.ev.on("messages.upsert", async _0x16e577 => {
+      const _0x424067 = _0x16e577.messages[0x0];
+      if (!_0x424067.message || !_0x424067.message.extendedTextMessage) {
+        return;
+      }
+      if (_0x424067.message.extendedTextMessage.contextInfo && _0x424067.message.extendedTextMessage.contextInfo.stanzaId === _0x42a7f4.key.id) {
+        const _0x478c2f = _0x424067.message.extendedTextMessage.text.trim();
+        try {
+          switch (_0x478c2f) {
+            case '1':
+              await _0x30b621.sendMessage(_0x34ec03, {
+                'video': {
+                  'url': _0x4da5ce.result.video_sd
+                },
+                'mimetype': "video/mp4",
+                'caption': "SD VIDEO ✅\n\n> *Made By Dark Cyber Maker ™*"
+              }, {
+                'quoted': _0x330f83
+              });
+              break;
+            case '2':
+              await _0x30b621.sendMessage(_0x34ec03, {
+                'video': {
+                  'url': _0x4da5ce.result.video_hd
+                },
+                'mimetype': 'video/mp4',
+                'caption': "HD VIDEO ✅\n\n> *Made By Dark Cyber Maker ™*"
+              }, {
+                'quoted': _0x330f83
+              });
+              break;
+            default:
+              _0x5724c0("Invalid option. Please select a valid option 🔴");
+          }
+        } catch (_0x62aa57) {
+          console.log(_0x62aa57);
+          _0x5724c0('' + _0x62aa57);
+        }
+      }
+    });
+  } catch (_0x4a3f81) {
+    console.log(_0x4a3f81);
+    _0x5724c0('' + _0x4a3f81);
+  }
+});
+cmd({
+  'pattern': 'logo',
+  'desc': "Create Your Logo.",
+  'category': "download",
+  'filename': __filename
+}, async (_0x23a403, _0x497d76, _0x376228, {
+  from: _0xaaa059,
+  quoted: _0x465b29,
+  body: _0x10edcf,
+  isCmd: _0x4f7664,
+  command: _0x4a9388,
+  args: _0x363aac,
+  q: _0x532047,
+  isGroup: _0x5901e8,
+  sender: _0x25a60c,
+  senderNumber: _0x4ecd10,
+  botNumber2: _0x26b640,
+  botNumber: _0x4be6af,
+  pushname: _0x5c0efd,
+  isMe: _0x261fc0,
+  isOwner: _0x39b217,
+  groupMetadata: _0x37c457,
+  groupName: _0x10afc7,
+  participants: _0x2c5592,
+  groupAdmins: _0x3c06ee,
+  isBotAdmins: _0x17c91c,
+  isAdmins: _0x1506c8,
+  reply: _0x51259e
+}) => {
+  try {
+    const _0x4d6866 = await fetchJson("https://api-pink-venom.vercel.app/api/logo?url=https://en.ephoto360.com/create-a-blackpink-style-logo-with-members-signatures-810.html&name=" + _0x532047);
+    await _0x23a403.sendMessage(_0xaaa059, {
+      'image': {
+        'url': _0x4d6866.result.download_url
+      },
+      'caption': "> *Made By Dark Cyber Maker ™*"
+    }, {
+      'quoted': _0x497d76
+    });
+  } catch (_0x477ffd) {
+    console.log(_0x477ffd);
+    await _0x23a403.sendMessage(_0xaaa059, {
+      'react': {
+        'text': '❌',
+        'key': _0x497d76.key
+      }
+    });
+    _0x51259e('' + _0x477ffd);
+  }
+});
+cmd({
+  'pattern': "xnxx",
+  'alias': ["xndl", "xvdown"],
+  'react': '🔞',
+  'desc': "Download Xnxx Videos.",
+  'category': "download",
+  'filename': __filename
+}, async (_0x484573, _0x5444ad, _0x30dd2e, {
+  from: _0x2a3723,
+  quoted: _0x2435b2,
+  reply: _0x27a70b,
+  q: _0x510f13
+}) => {
+  try {
+    if (!_0x510f13) {
+      return await _0x27a70b("Please give me few word !");
+    }
+    const _0x17cf5b = await fetchJson("https://nsfw-pink-venom.vercel.app/api/xnxx/search?query=" + _0x510f13);
+    if (_0x17cf5b.result.length < 0x0) {
+      return await _0x27a70b("Not results found !");
+    }
+    const _0x324ebe = await fetchJson("https://nsfw-pink-venom.vercel.app/api/xnxx/download?url=" + _0x17cf5b.result[0x0].url);
+    await _0x484573.sendMessage(_0x2a3723, {
+      'image': {
+        'url': _0x324ebe.result.image || ''
+      },
+      'caption': "💋 𝗦𝗘𝗢𝗡 𝗠𝗗 𝗫𝗡𝗫𝗫 𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗𝗘𝗥 📥\n\n> *Made By Dark Cyber Maker ™*"
+    }, {
+      'quoted': _0x5444ad
+    });
+    await _0x484573.sendMessage(_0x2a3723, {
+      'document': {
+        'url': _0x324ebe.result.files.hight
+      },
+      'mimetype': 'video/mp4',
+      'fileName': _0x324ebe.result.title,
+      'caption': "> *Made By Dark Cyber Maker ™*"
+    }, {
+      'quoted': _0x5444ad
+    });
+    await _0x484573.sendMessage(_0x2a3723, {
+      'document': {
+        'url': _0x324ebe.result.files.low
+      },
+      'mimetype': "video/mp4",
+      'fileName': _0x324ebe.result.title,
+      'caption': "> *Made By Dark Cyber Maker ™*"
+    }, {
+      'quoted': _0x5444ad
+    });
+  } catch (_0x5328a1) {
+    console.log(_0x5328a1);
+    _0x27a70b('' + _0x5328a1);
+  }
+});
+cmd({
+  'pattern': "downjid",
+  'react': '✔️',
+  'desc': "Movie Searcher",
+  'category': "downlord",
+  'filename': __filename
+}, async (_0x5bd7f2, _0x2d8e3d, _0x25d95e, {
+  from: _0x1ddc47,
+  l: _0xae3772,
+  quoted: _0x32dcf6,
+  body: _0x319ffd,
+  isCmd: _0x117c97,
+  command: _0x265ab8,
+  mentionByTag: _0x3b9e99,
+  db_pool: _0x5d0d45,
+  args: _0x3de702,
+  q: _0x439b31,
+  isGroup: _0x352627,
+  sender: _0x59ea1f,
+  senderNumber: _0x29587e,
+  botNumber2: _0x184cd4,
+  botNumber: _0x2f389e,
+  pushname: _0x202282,
+  isMe: _0x2b3dcf,
+  isOwner: _0x392ded,
+  groupMetadata: _0x5a90e3,
+  groupName: _0x15c3f2,
+  participants: _0xf2d528,
+  groupAdmins: _0x306d64,
+  isBotAdmins: _0x6ac03e,
+  isCreator: _0xadab9,
+  isDev: _0x2ffacf,
+  isAdmins: _0x12eb17,
+  reply: _0x3e9143
+}) => {
+  try {
+    if (!_0x25d95e.quoted) {
+      return _0x3e9143("*ℹ Please mention a Derect Link*");
+    }
+    if (!_0x439b31) {
+      return;
+    }
+    const _0x4157eb = _0x439b31.split(" & ")[0x0];
+    const _0x5312bd = _0x439b31.split(" & ")[0x1];
+    await _0x5bd7f2.sendMessage(_0x4157eb, {
+      'document': {
+        'url': _0x25d95e.quoted.msg
+      },
+      'caption': "\n" + _0x5312bd + "\n> *Made By Dark Cyber Maker ™*",
+      'mimetype': 'video/mp4',
+      'fileName': "🎬 SEON-MD 🎬\n" + _0x5312bd + ".mp4"
+    });
+  } catch (_0x55cf00) {
+    _0x3e9143("❗ Error" + _0x55cf00);
+    _0xae3772(_0x55cf00);
+  }
+});
+cmd({
+  'pattern': 'apk',
+  'react': '📱',
+  'desc': "Download For Apk.",
+  'category': "download",
+  'filename': __filename
+}, async (_0x48c64d, _0x5c6e6e, _0x351202, {
+  from: _0x5d3309,
+  l: _0x3919ca,
+  quoted: _0x46e795,
+  body: _0x252e8f,
+  isCmd: _0xd54984,
+  command: _0x5bc09a,
+  args: _0x16c6cb,
+  q: _0x3b7e79,
+  isGroup: _0x4cd4ce,
+  sender: _0xdc8e9b,
+  senderNumber: _0x3a475e,
+  botNumber2: _0x3c289e,
+  botNumber: _0x13ebb6,
+  pushname: _0x25b206,
+  isMe: _0x33e761,
+  isOwner: _0x43152b,
+  groupMetadata: _0x287559,
+  groupName: _0x4935dc,
+  participants: _0x56ed14,
+  groupAdmins: _0x2dc0ef,
+  isBotAdmins: _0x573120,
+  isAdmins: _0x39b9dd,
+  reply: _0x480cdd
+}) => {
+  try {
+    await _0x48c64d.sendMessage(_0x5d3309, {
+      'react': {
+        'text': '📥',
+        'key': _0x5c6e6e.key
+      }
+    });
+    if (!_0x3b7e79) {
+      return await _0x48c64d.sendMessage(_0x5d3309, {
+        'text': "Need apk link..."
+      }, {
+        'quoted': _0x5c6e6e
+      });
+    }
+    const _0x4b1755 = await apkdl.download(_0x3b7e79);
+    let _0x39caa0 = "🎮 𝗦𝗘𝗢𝗡 𝗔𝗣𝗞 𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗𝗘𝗥 📙\n\n★| Name : " + _0x4b1755.name + "\n\n★| Developer : " + _0x4b1755["package"] + "\n\n★| Last update : " + _0x4b1755.lastup + "\n\n★| Size : " + _0x4b1755.size + "\n\n> *Made By Dark Cyber Maker ™*";
+    await _0x48c64d.sendMessage(_0x5d3309, {
+      'image': {
+        'url': _0x4b1755.icon
+      },
+      'caption': _0x39caa0
+    }, {
+      'quoted': _0x5c6e6e
+    });
+    let _0x4f191b = await _0x48c64d.sendMessage(_0x5d3309, {
+      'document': {
+        'url': _0x4b1755.dllink
+      },
+      'mimetype': "application/vnd.android.package-archive",
+      'fileName': _0x4b1755.name + '.' + "apk",
+      'caption': ''
+    }, {
+      'quoted': _0x5c6e6e
+    });
+    await _0x48c64d.sendMessage(_0x5d3309, {
+      'react': {
+        'text': '📁',
+        'key': _0x4f191b.key
+      }
+    });
+    await _0x48c64d.sendMessage(_0x5d3309, {
+      'react': {
+        'text': '✔',
+        'key': _0x5c6e6e.key
+      }
+    });
+  } catch (_0x117ae4) {
+    console.log(_0x117ae4);
+    _0x480cdd('' + _0x117ae4);
   }
 });
