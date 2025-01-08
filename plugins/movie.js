@@ -51,7 +51,7 @@ try{
 
 var Seedr = require("seedr");
 var seedr = new Seedr();
-await seedr.login("email","password");
+await seedr.login("ketilah360@suggets.com","CK2006ck#");
 
 const ad_mg = await conn.sendMessage(from, { text : 'ᴜᴘʟᴏᴀᴅɪɴɢ magnet file...📥' }, {quoted: mek} )
 const magnet = await seedr.addMagnet(q);
