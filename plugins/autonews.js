@@ -38,7 +38,7 @@ async function checkAndPostNews(conn, groupId) {
         }
 
         if (!lastNewsTitles[groupId].includes(newsItem.title)) {
-           await conn.sendMessage(config.JID, { 
+           await conn.sendMessage(groupId, { 
                 text: `📰 *${newsItem.title}*\n\n${newsItem.content}\n\n📅 ${newsItem.date}\n🔗Read More: ${newsItem.url}\n\n\n> 👨🏻‍💻 ᴍᴀᴅᴇ ʙʏ *ᴄʜᴇᴛʜᴍɪɴᴀ ᴋᴀᴠɪꜱʜᴀɴ*` 
             });
             lastNewsTitles[groupId].push(newsItem.title);
