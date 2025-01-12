@@ -10,21 +10,24 @@ let lastNewsTitles = {};
 async function getLatestNews() {
     let newsData = [];
     
-    // Hiru News
+    // Esana News
     try {
-        const hiruApi = new Hiru();
-        const hiruNews = await hiruApi.BreakingNews();
-        newsData.push({
-            title: hiruNews.results.title,
-            content: hiruNews.results.news,
-            date: hiruNews.results.date,
-            url: hiruNews.results.newsURL
-        });
+        const esanaApi = new Esana();
+        const esanaNews = await esanaApi.getLatestNews(); 
+        if (esanaNews && esanaNews.title && esanaNews.description && esanaNews.publishedAt) {
+            newsData.push({
+                title: esanaNews.title,
+                content: esanaNews.description,
+                date: esanaNews.publishedAt,
+                url: esanaNews.URL
+            });
+        } else {
+            console.error("Error: Esana News returned invalid data.");
+        }
     } catch (err) {
-        console.error(`Error fetching Hiru News: ${err.message}`);
+        console.error(`Error fetching Esana News: ${err.message}`);
     }
 
-    
     return newsData;
 }
 
@@ -38,7 +41,7 @@ async function checkAndPostNews(conn, groupId) {
 
         if (!lastNewsTitles[groupId].includes(newsItem.title)) {
            await conn.sendMessage(groupId, { 
-                text: `📰 *${newsItem.title}*\n\n${newsItem.content}\n\n📅 ${newsItem.date}\n🔗Read More: ${newsItem.url}\n\n\n> 👨🏻‍💻 ᴍᴀᴅᴇ ʙʏ *ᴄʜᴇᴛʜᴍɪɴᴀ ᴋᴀᴠɪꜱʜᴀɴ*` 
+                text: `📰 *${newsItem.title}*\n\n✍🏻 ${newsItem.content}\n\n📆 ${newsItem.date}\n🔗ʀᴇᴀᴅ ᴍᴏʀᴇ: ${newsItem.url}\n\n\n> 👨🏻‍💻 ᴍᴀᴅᴇ ʙʏ *ᴄʜᴇᴛʜᴍɪɴᴀ ᴋᴀᴠɪꜱʜᴀɴ*` 
             });
             lastNewsTitles[groupId].push(newsItem.title);
 
@@ -67,7 +70,7 @@ cmd({
                 if (!activeGroups[from]) {
                     activeGroups[from] = true;
 
-                    await conn.sendMessage(from, { text: "🇱🇰 Auto 24/7 News Activated.\n\n> 👨🏻‍💻 ᴍᴀᴅᴇ ʙʏ *ᴄʜᴇᴛʜᴍɪɴᴀ ᴋᴀᴠɪꜱʜᴀɴ*" });
+                    await conn.sendMessage(from, { text: "🇱🇰 Auto 24/7 News Activated." });
 
                     if (!activeGroups['interval']) {
                         activeGroups['interval'] = setInterval(async () => {
@@ -94,7 +97,7 @@ cmd({
     }
 });
 
-// stop send news 
+// stop news
 cmd({
     pattern: "stopnews",
     desc: "Disable Sri Lankan news updates in this group",
