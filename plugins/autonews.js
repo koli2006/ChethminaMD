@@ -18,7 +18,8 @@ async function getLatestNews() {
             title: hiruNews.results.title,
             content: hiruNews.results.news,
             date: hiruNews.results.date,
-            url: hiruNews.results.newsURL
+            url: hiruNews.results.newsURL,
+            img: hiruNews.results.thumb
         });
     } catch (err) {
         console.error(`Error fetching Hiru News: ${err.message}`);
@@ -35,11 +36,10 @@ async function checkAndPostNews(conn, groupId) {
         if (!lastNewsTitles[groupId]) {
             lastNewsTitles[groupId] = [];
         }
+        
 
         if (!lastNewsTitles[groupId].includes(newsItem.title)) {
-           await conn.sendMessage(groupId, { 
-                text: `📰 *${newsItem.title}*\n\n${newsItem.content}\n\n📅 ${newsItem.date}\n🔗Read More: ${newsItem.url}\n\n> 👨🏻‍💻 ᴍᴀᴅᴇ ʙʏ *ᴄʜᴇᴛʜᴍɪɴᴀ ᴋᴀᴠɪꜱʜᴀɴ*` 
-            });
+           await conn.sendMessage(groupId, { image: { url: ${newsItem.img} }, caption: `📰 *${newsItem.title}*\n\n${newsItem.content}\n\n📅 ${newsItem.date}\n🔗Read More: ${newsItem.url}\n\n> 👨🏻‍💻 ᴍᴀᴅᴇ ʙʏ *ᴄʜᴇᴛʜᴍɪɴᴀ ᴋᴀᴠɪꜱʜᴀɴ*` }, { quoted: mek });
             lastNewsTitles[groupId].push(newsItem.title);
 
             if (lastNewsTitles[groupId].length > 100) {
